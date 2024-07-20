@@ -173,7 +173,7 @@ In the terminal, under the command, you will see messages from the node:
 #### 
 There you can see the default turtle’s name and the coordinates where it spawns.
 #### 
-- Open a new terminal and source ROS 2 again:
+- Open a new terminal and source ROS 2 again, and then run this command:
 #### 
 ```bash
 ros2 run turtlesim turtle_teleop_key

@@ -64,7 +64,7 @@ rosrun turtlesim turtle_teleop_key
 #### They communicate with each other over a rostopic with the turtle teleop keynote node publishing the keystrokes on a topic and the turtlesim node subscribing to the same topic to receive the keystrokes
 #### 
 #### To visualize their relationship, we can use the rqt graph:
-- Open another terminal and run this command:
+- Open another terminal, source the script, and run this command:
 ####
 ```bash
 source /opt/ros/noetic/setup.bash
@@ -108,7 +108,7 @@ rosmsg show geometry_msgs/Twist
 ####
 ![geom](https://github.com/user-attachments/assets/5aab369e-ff36-4775-8c9c-4bade0550651)
 #### 
-- Now we have all 3 inputs to run the rostopic publisher command on a new terminal:
+- Now we have all 3 inputs (topic type, message type, message arguments) to run the rostopic publisher command on a new terminal:
 ####
 ```bash
 source /opt/ros/noetic/setup.bash
@@ -121,7 +121,7 @@ And we should get this arc drawing:
 #### 
 ![arcturtle](https://github.com/user-attachments/assets/316ef956-3585-4bb1-b680-01929bc8c9b6)
 #### 
-- To draw a circle, we must modify the code we wrote on the last terminal we opened by first deleting the first drawing, then modifying the last command line to become like this:
+- To draw a circle, we must modify the code we wrote on the last terminal we opened by first opening a new terminal, sourcing the script and then deleting the first drawing, after that modify the last command line on the previous terminal to become like this:
 ####
 ```bash
 rostopic pub /turtle1/cmd_vel geometry_msgs/Twist -r 1 -- '[2.0, 0.0, 0.0]' '[0.0, 0.0, -1.8]'

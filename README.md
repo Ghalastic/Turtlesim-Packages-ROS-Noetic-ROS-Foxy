@@ -28,7 +28,7 @@ roscore
 sudo apt-get install ros-$(rosversion -d)-turtlesim
 ```
 ####
-### Drawing an Arc, and Circle:
+### Drawing an Arc, and a Circle:
 #### 
 - Open another terminal, source the script, and start the roscore:
 ####
@@ -61,7 +61,7 @@ rosrun turtlesim turtle_teleop_key
 - Publisher: turtle teleop key node
 - Subscriber: turtlesim node
 #### 
-#### They communicate with each other over a rostopic with the turtle teleop keynote node publishing the keystrokes on a topic and the turtlesim node subscribing to the same topic to receive the keystrokes
+#### They communicate with each other over a rostopic with the turtle teleop key node publishing the keystrokes on a topic and the turtlesim node subscribing to the same topic to receive the keystrokes
 #### 
 #### To visualize their relationship, we can use the rqt graph:
 - Open another terminal, source the script, and run this command:

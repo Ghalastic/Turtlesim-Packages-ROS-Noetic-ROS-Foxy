@@ -131,4 +131,57 @@ rostopic pub /turtle1/cmd_vel geometry_msgs/Twist -r 1 -- '[2.0, 0.0, 0.0]' '[0.
 #### 
 ![turtlecirclecute](https://github.com/user-attachments/assets/1a74a213-0cd7-41ff-a50b-1c9561ec1f79)
 #### 
-
+## Turtlesim in ROS Foxy:-
+####
+- Start by updating and upgrading the system in a new terminal, and Install the turtlesim package for the ROS 2 distro:
+#### 
+```bash
+sudo apt update
+sudo apt upgrade
+sudo apt install ros-foxy-turtlesim
+```
+#### 
+- Check that the package is installed:
+#### 
+```bash
+ros2 pkg executables turtlesim
+```
+####
+The above command should return a list of turtlesim’s executables:
+#### 
+```bash
+turtlesim draw_square
+turtlesim mimic
+turtlesim turtle_teleop_key
+turtlesim turtlesim_node
+```
+####
+- To start turtlesim, enter the following command in the same terminal:
+####
+```bash
+ros2 run turtlesim turtlesim_node
+```
+#### 
+In the terminal, under the command, you will see messages from the node:
+#### 
+```bash
+[INFO] [turtlesim]: Starting turtlesim with node name /turtlesim
+[INFO] [turtlesim]: Spawning turtle [turtle1] at x=[5.544445], y=[5.544445], theta=[0.000000]
+```
+#### 
+![install-turtle-foxy](https://github.com/user-attachments/assets/bdc52541-137d-4b16-9ae0-e773941653d6)
+#### 
+There you can see the default turtle’s name and the coordinates where it spawns.
+#### 
+- Open a new terminal and source ROS 2 again:
+#### 
+```bash
+ros2 run turtlesim turtle_teleop_key
+```
+#### 
+![teleop-ros2](https://github.com/user-attachments/assets/4538b0ae-b5a5-4ce8-ab30-5a6ecb3b1a8f)
+#### 
+control the movement of the turtle by clicking on the arrow keys to start drawing.
+#### 
+![ros2circle](https://github.com/user-attachments/assets/b1d9f94d-2b52-4277-a113-4b24fb985087)
+#### 

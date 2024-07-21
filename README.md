@@ -182,3 +182,8 @@ control the movements of the turtle by clicking on the arrow keys to start drawi
 #### 
 ![ros2circle](https://github.com/user-attachments/assets/b1d9f94d-2b52-4277-a113-4b24fb985087)
 #### 
+## References:
+#### 
+- [ROS Noetic Turtle Simulation Tutorial 1](https://youtu.be/lslmj8C4_F4?si=XeKh9xU6ZRnxvwNZ)
+- [ROS Noetic Turtle Simulation Tutorial 2](https://youtu.be/JVImwOFQ17A?si=JwrQMevHi4WCsV9z)
+#### 

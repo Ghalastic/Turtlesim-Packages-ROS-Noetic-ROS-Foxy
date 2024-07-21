@@ -6,7 +6,7 @@ Manipulate (experiment) with turtlesim packages in both ROS Noetic and ROS Foxy.
 #### 
 ## Getting Started with Turtlesim:- 
 #### 
-## Turtlesim in ROS Noetic:-
+## Turtlesim in ROS Noetic:
 ####  
 - Open a terminal and source the ROS Noetic setup script:
 #### 
@@ -19,8 +19,6 @@ source /opt/ros/noetic/setup.bash
 ```bash
 roscore
 ```
-#### 
-![roscore-code](https://github.com/user-attachments/assets/6ceaa81d-fe97-40c3-a15d-22f5c535445a)
 #### 
 - install and start the turtlesim:
 ####

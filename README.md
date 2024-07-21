@@ -20,7 +20,7 @@ source /opt/ros/noetic/setup.bash
 roscore
 ```
 #### 
-- install and start the turtlesim:
+- Install and start the turtlesim:
 ####
 ```bash
 sudo apt-get install ros-$(rosversion -d)-turtlesim
@@ -100,7 +100,7 @@ source /opt/ros/noetic/setup.bash
 rosmsg show geometry_msgs/Twist
 ```
 ####
-- the output should be the 3 linear components and the 3 angular components needed to define this message type:
+- The output should be the 3 linear components and the 3 angular components needed to define this message type:
 ####
 ![geom](https://github.com/user-attachments/assets/5aab369e-ff36-4775-8c9c-4bade0550651)
 #### 
@@ -178,7 +178,7 @@ ros2 run turtlesim turtle_teleop_key
 #### 
 ![teleop-ros2](https://github.com/user-attachments/assets/4538b0ae-b5a5-4ce8-ab30-5a6ecb3b1a8f)
 #### 
-control the movements of the turtle by clicking on the arrow keys to start drawing.
+Control the movements of the turtle by clicking on the arrow keys to start drawing.
 #### 
 ![ros2circle](https://github.com/user-attachments/assets/b1d9f94d-2b52-4277-a113-4b24fb985087)
 #### 

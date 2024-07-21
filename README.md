@@ -4,10 +4,10 @@
 #### 
 Manipulate (experiment) with turtlesim packages in both ROS Noetic and ROS Foxy.
 #### 
-## Turtlesim in ROS Noetic:-
-#### 
 ## Getting Started with Turtlesim:- 
 #### 
+## Turtlesim in ROS Noetic:-
+####  
 - Open a terminal and source the ROS Noetic setup script:
 #### 
 ```bash
@@ -58,10 +58,10 @@ rosrun turtlesim turtle_teleop_key
 ![teleop](https://github.com/user-attachments/assets/c0233caf-8c32-494b-8ebd-364fec392282)
 #### 
 ### The Concept of Publishing and Subscribing:
-- Publisher: turtle teleop key node
+- Publisher: turtle_teleop_key node
 - Subscriber: turtlesim node
 #### 
-#### They communicate with each other over a rostopic with the turtle teleop key node publishing the keystrokes on a topic and the turtlesim node subscribing to the same topic to receive the keystrokes
+#### They communicate with each other over a ROS topic with the turtle_teleop_key node publishing the keystrokes on a topic and the turtlesim node subscribing to the same topic to receive the keystrokes
 #### 
 #### To visualize their relationship, we can use the rqt graph:
 - Open another terminal, source the script, and run this command:
@@ -77,14 +77,12 @@ rosrun rqt_graph rqt_graph
 #### 
 ![rqt graph](https://github.com/user-attachments/assets/e0856ffb-4e26-4128-b1a6-f3be2fa3b39b)
 #### 
-#### Graph Explanation:
-####
-The graph shows:
+#### The Graph Shows:
 ####
 - Publisher: /teleop_turtle node
 - Subscriber: /turtlesim node
 #### 
-Which also shows that they're communicating over a rostopic which is: /turtle1/cmd_vel, they communicate with each other by sending and receiving the same type of message.
+Which also shows that they're communicating over a ROS topic which is: /turtle1/cmd_vel, they communicate with each other by sending and receiving the same type of message.
 #### 
 #### A topic type is defined by the message type published on it, the type of message sent on a topic can be determined using the following commands:-
 #### 
@@ -108,7 +106,7 @@ rosmsg show geometry_msgs/Twist
 ####
 ![geom](https://github.com/user-attachments/assets/5aab369e-ff36-4775-8c9c-4bade0550651)
 #### 
-- Now we have all 3 inputs (topic type, message type, message arguments) to run the rostopic publisher command on a new terminal:
+- Now we have all 3 inputs (topic type, message type, message arguments) to run the ROS topic publisher command on a new terminal:
 ####
 ```bash
 source /opt/ros/noetic/setup.bash
@@ -121,7 +119,7 @@ And we should get this arc drawing:
 #### 
 ![arcturtle](https://github.com/user-attachments/assets/316ef956-3585-4bb1-b680-01929bc8c9b6)
 #### 
-- To draw a circle, we must modify the code we wrote on the last terminal we opened by first opening a new terminal, sourcing the script and then deleting the first drawing, after that modify the last command line on the previous terminal to become like this:
+- To draw a circle, we must modify the code we wrote on the last terminal we opened by first opening a new terminal, sourcing the script and then deleting the first drawing, after that, we modify the last command line on the previous terminal to become like this:
 ####
 ```bash
 rostopic pub /turtle1/cmd_vel geometry_msgs/Twist -r 1 -- '[2.0, 0.0, 0.0]' '[0.0, 0.0, -1.8]'
@@ -133,7 +131,7 @@ rostopic pub /turtle1/cmd_vel geometry_msgs/Twist -r 1 -- '[2.0, 0.0, 0.0]' '[0.
 #### 
 ## Turtlesim in ROS Foxy:-
 ####
-- Start by updating and upgrading the system in a new terminal, and Install the turtlesim package for the ROS 2 distro:
+- Start by updating and upgrading the system in a new terminal, and Install the turtlesim package for the ROS Foxy distro:
 #### 
 ```bash
 sudo apt update
@@ -173,15 +171,16 @@ In the terminal, under the command, you will see messages from the node:
 #### 
 There you can see the default turtle’s name and the coordinates where it spawns.
 #### 
-- Open a new terminal and source ROS 2 again, and then run this command:
+- Open a new terminal and source ROS Foxy again, and then run this command:
 #### 
 ```bash
+source /opt/ros/foxy/setup.bash
 ros2 run turtlesim turtle_teleop_key
 ```
 #### 
 ![teleop-ros2](https://github.com/user-attachments/assets/4538b0ae-b5a5-4ce8-ab30-5a6ecb3b1a8f)
 #### 
-control the movement of the turtle by clicking on the arrow keys to start drawing.
+control the movements of the turtle by clicking on the arrow keys to start drawing.
 #### 
 ![ros2circle](https://github.com/user-attachments/assets/b1d9f94d-2b52-4277-a113-4b24fb985087)
 #### 
